@@ -17,6 +17,6 @@ ln -s -f ../../hooks/post-merge ./post-merge
 mkdir /var/www/obbard.me
 chown chris:chris /var/www/obbard.me
 
-(crontab -l && echo "*/5 * * * * cd $HOME/projects/personal_website git pull > /dev/null 2>&1 || true") | crontab -
+(crontab -l && echo "*/5 * * * * cd $HOME/projects/personal_website && git pull > /dev/null 2>&1 || true") | crontab -
 
 ```
