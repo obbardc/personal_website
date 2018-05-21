@@ -10,7 +10,9 @@ apt-get install jekyll git make
 cd /home/chris
 git clone https://github.com/obbardc/personal_website.git
 cd personal_website
-ln -s git_hooks/post-merge .git/hooks/post-merge
+
+cd .git/hooks
+ln -s -f ../../hooks/post-merge ./post-merge
 
 mkdir /var/www/obbard.me
 chown chris:chris /var/www/obbard.me
